@@ -919,6 +919,10 @@ video {
   padding-top: 4rem;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .pt-24 {
   padding-top: 6rem;
 }
@@ -1038,7 +1042,6 @@ video {
 
 header {
   z-index: 99 !important;
-  height: 90px;
 }
 
 main {
@@ -1151,13 +1154,13 @@ button.btn:hover::before {
 
 .nav-mobile-view {
   position: absolute;
-  top: 90px;
+  top: 70px;
   left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #21051ce6;
+  background-color: #21051cf4;
   padding-bottom: 40px;
 }
 
@@ -1372,6 +1375,7 @@ button.btn:hover::before {
 
   header {
     padding-inline: 10px;
+    height: auto;
   }
 }
 
@@ -1392,6 +1396,11 @@ button.btn:hover::before {
   .sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .sm\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .sm\:pt-20 {
@@ -1511,6 +1520,10 @@ button.btn:hover::before {
 }
 
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:w-3 {
     width: 0.75rem;
   }
