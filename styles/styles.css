@@ -615,6 +615,10 @@ video {
   box-shadow: 2px 2px 8px #21051c;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -637,6 +641,10 @@ video {
 
 .z-20 {
   z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .col-span-1 {
@@ -673,8 +681,8 @@ video {
   margin-bottom: 2rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .block {
@@ -1020,8 +1028,26 @@ video {
   opacity: 0.3;
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header {
+  z-index: 99 !important;
+  height: 90px;
+}
+
+main {
+  position: relative;
+  /* z-index: -1; */
+}
+
+h1 {
+  font-size: 1.5cm;
 }
 
 img {
@@ -1042,7 +1068,8 @@ img {
   transition: 0.3s;
 }
 
-.cards:hover, .image-shadow img:hover {
+.cards:hover,
+.image-shadow img:hover {
   transform: scale(1.1);
 }
 
@@ -1124,13 +1151,13 @@ button.btn:hover::before {
 
 .nav-mobile-view {
   position: absolute;
-  margin-top: 51px;
-  width: 100vw;
-  right: 0;
+  top: 90px;
+  left: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #21051cee;
+  background-color: #21051ce6;
   padding-bottom: 40px;
 }
 
@@ -1141,6 +1168,7 @@ button.btn:hover::before {
   gap: 15px;
   padding: 30px 0;
   color: #f7f7f7;
+  z-index: 88;
 }
 
 #pfp-3 {
@@ -1208,7 +1236,8 @@ button.btn:hover::before {
   background-color: #21051c;
 }
 
-.owl-nav .owl-prev:hover, .owl-next:hover {
+.owl-nav .owl-prev:hover,
+.owl-next:hover {
   background-color: transparent !important;
 }
 
@@ -1231,7 +1260,7 @@ button.btn:hover::before {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
   .container {
     max-width: 768px;
     margin-left: auto;
@@ -1339,6 +1368,10 @@ button.btn:hover::before {
     padding-inline: 5px;
     /* background-color: gray; */
   }
+
+  header {
+    padding-inline: 10px;
+  }
 }
 
 .hover\:border-myBlue:hover {
@@ -1358,6 +1391,10 @@ button.btn:hover::before {
   .sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .sm\:pt-20 {
+    padding-top: 5rem;
   }
 
   .sm\:text-md {
