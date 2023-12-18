@@ -1207,8 +1207,7 @@ button.btn:hover::before {
 /* carousel custom styles */
 
 .owl-carousel .owl-dots button.active span {
-  background-color: #21051c00 !important;
-  opacity: 0;
+  background-color: #8f0f7a !important;
 }
 
 .slider-btn i {
@@ -1226,6 +1225,8 @@ button.btn:hover::before {
 .owl-carousel .item {
   max-width: 217px;
   max-height: 217px;
+  width: 217px;
+  height: 217px;
 }
 
 /* social icons */
