@@ -36,7 +36,8 @@
   </head>
   <body class="relative bg-secondary-100">
     
-    <header class=" fixed w-full bg-whiteText opacity-50" data-aos="fade-down">
+    <header class=" fixed w-full" data-aos="fade-down">
+      <div class="hidden hide"></div>
       <div class="container flex justify-between items-center py-5">
         <div class="logo cursor-pointer">
           <img src="./images/Logo.png" alt="" />
@@ -57,7 +58,7 @@
             <li class="links linkTransition"><a href="">Services</a></li>
             <li class="links linkTransition"><a href="">Careers</a></li>
           </ul>
-          <div id="mobile-get-intouch" class="hidden">
+          <div id="mobile-get-intouch" class="md:hidden">
             <button
               class="btn px-4 py-1.5 border align-middle rounded-md border-whiteText text-whiteText font-medium tracking-wider block relative hover:border-myBlue"
             >
@@ -66,7 +67,7 @@
           </div>
         </nav>
         <div class="flex items-center gap-7 justify-center">
-          <div class="get-intouch hidden">
+          <div class="get-intouch hidden md:block">
             <button
               class="btn px-4 py-1.5 border align-middle rounded-md border-myBlue text-myBlue font-medium tracking-wider block relative"
             >
@@ -362,7 +363,7 @@
             <p class="text-lg font-bold mb-7">WOMEN & GIRLS FULL SERVICES</p>
             <div class="max-w-full">
               <div
-                class="owl-carousel owl-theme grid grid-cols-5 overflow-x-hidden justify-items-center"
+                class="owl-carousel owl-theme"
               >
                 <div class="item image-shadow">
                   <img src="./images/Ellipse 7.png" alt="" />
@@ -389,7 +390,7 @@
       >
         <div class="container relative h-60 z-20">
           <div
-            class="img-shadow-2 lg:w-3.5/6 md:w-2/4 w-fit mx-auto flex flex-col gap-4 items-center px-5 py-10"
+            class="img-shadow-2 lg:w-3.5/6 md:w-2/4 w-fit mx-auto flex flex-col gap-4 items-center px-5 py-10 relative z-50"
             data-aos="zoom-in"
           >
             <span class="block">
@@ -412,7 +413,6 @@
     </main>
     <footer
       class="bg-primary py-10 md:px-0 sm:px-10 px-5 text-whiteText"
-      data-aos="fade-up"
     >
       <div class="container">
         <div class="flex flex-col items-center gap-3">
