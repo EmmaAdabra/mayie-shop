@@ -19,10 +19,12 @@ window.addEventListener("scroll", () => {
     overlayBg.classList.remove("active");
   }
 
-  if (scrollY > 1) {
-    exitMenu.classList.add("hidden");
-    menuBtn.classList.remove("hidden");
-    $(navElement).fadeOut();
+  if (navElement.classList.contains("nav-mobile-view")) {
+    if (scrollY > 1) {
+      exitMenu.classList.add("hidden");
+      menuBtn.classList.remove("hidden");
+      $(navElement).fadeOut();
+    }
   }
 });
 
