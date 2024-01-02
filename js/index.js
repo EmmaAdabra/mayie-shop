@@ -1,12 +1,42 @@
 // AOS swiper library init
 AOS.init();
+
 const navElement = document.querySelector("#nav");
 const linkElement = document.querySelector("#links");
 const exitMenu = document.querySelector("#exit-menu-btn");
 const menuBtn = document.querySelector("#menu-btn");
+const header = document.querySelector("header");
+const loader = document.querySelector(".loader");
+const delayElement = document.querySelectorAll(".data-aos-delay")
+let totalTime;
+
+const startTime = performance.now();
+
+window.addEventListener("load", function () {
+  const endTime = performance.now();
+  totalTime = endTime - startTime;
+  console.log(totalTime)
+});
+
+delayElement.forEach(element=> {
+  element.setAttribute("data-aos-delay", totalTime + 100)
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+  const loader = document.querySelector(".loader");
+
+  // Function to hide the loader
+  function hideLoader() {
+    loader.firstElementChild.style.opacity = "0"
+    loader.style.opacity = "0";
+    loader.style.display = "none";
+  }
+
+  // Hide loader when the DOM content has fully loaded
+  setTimeout(hideLoader, totalTime)
+});
 
 window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
   const overlayBg = document.querySelector(".hide");
 
   if (scrollY > 50) {
@@ -29,7 +59,6 @@ window.addEventListener("scroll", () => {
 });
 
 document.querySelector("#menu-btn").addEventListener("click", function () {
-  // const menuBtn
   menuBtn.classList.add("hidden");
   exitMenu.classList.remove("hidden");
   navElement.classList.add("nav-mobile-view");
@@ -38,12 +67,9 @@ document.querySelector("#menu-btn").addEventListener("click", function () {
 });
 
 document.querySelector("#exit-menu-btn").addEventListener("click", function () {
-  // const menuBtn
   exitMenu.classList.add("hidden");
   menuBtn.classList.remove("hidden");
   $(navElement).fadeOut();
-  // navElement.classList.remove("nav-mobile-view");
-  // linkElement.classList.remove("links-mobile-view");
 });
 
 function removeClass() {

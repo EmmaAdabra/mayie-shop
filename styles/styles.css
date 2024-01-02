@@ -1032,6 +1032,46 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* loader animation */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 888;
+  background-color: #f6e8f4;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .spin-element {
+  border: 7px solid transparent;
+  border-top: 7px solid #f8b8ec;
+  border-bottom: 7px solid #21051c;
+  border-left: 7px solid #f9f9f9;
+  border-right: 7px solid #8f0f7a;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+  transition: all 0.4s;
+  animation: spin 0.5s linear infinite;
+}
+
 header {
   background-color: rgb(247, 247, 247);
   z-index: 99 !important;
